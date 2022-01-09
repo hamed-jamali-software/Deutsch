@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.controller.LoginPageController;
 import sample.model.Admin;
+import sample.view.MainPage;
 
 public class Main extends Application {
 
@@ -18,7 +19,7 @@ public class Main extends Application {
         LoginPageController loginPageController = new LoginPageController();
 
 
-        primaryStage.setScene(new Scene(loginPageController.getLoginPage()));
+         primaryStage.setScene(new Scene(new MainPage()));
         primaryStage.setWidth(400);
         primaryStage.setHeight(300);
 
