@@ -1,5 +1,6 @@
 package sample.controller;
 
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.model.Student;
@@ -25,6 +26,20 @@ public class MainPageController {
             addStudentStage.setScene(new Scene(addStudentController.getAddStudentPage()));
             addStudentStage.show();
 
+        });
+
+
+        mainPage.getRemoveButton().setOnAction(event -> {
+
+            Student selectedStudent = mainPage.getTableView().getSelectionModel().getSelectedItem();
+            if (selectedStudent != null) {
+                mainPage.getTableView().getItems().remove(selectedStudent);
+
+
+            }
+        });
+        mainPage.getExitButton().setOnAction(event -> {
+            Platform.exit();
         });
 
     }

@@ -20,16 +20,19 @@ public class AddStudentPage extends VBox {
 
 
         Label idlLabel = new Label("ID :");
+        idlLabel.setAlignment(Pos.CENTER_LEFT);
         idField = new TextField();
         HBox idRow = new HBox(idlLabel, idField);
         idRow.setAlignment(Pos.CENTER);
 
         Label nameLabel = new Label("Name :");
+        nameLabel.setAlignment(Pos.CENTER_LEFT);
         nameField = new TextField();
         HBox nameRow = new HBox(nameLabel, nameField);
         nameRow.setAlignment(Pos.CENTER);
 
         Label lastNameLabel = new Label("Last Name :");
+        lastNameLabel.setAlignment(Pos.CENTER_LEFT);
         lastNameField = new TextField();
         HBox lastNameRow = new HBox(lastNameLabel, lastNameField);
         lastNameRow.setAlignment(Pos.CENTER);
